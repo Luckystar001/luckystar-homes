@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <!-- <base href="https://websim.ai/c/ij2aMmIkJ8XRNoE4d"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luckystar-Homes - Our Services</title>
+    <link rel="stylesheet" href="service.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="agentlogin.html">Agents Login</a>
+            <a href="userlogin.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="https://websim-marketplace/services/sell">Sell</a>
+            <a href="https://websim-marketplace/services/rent">Rent</a>
+          </div>
+        </li>
+        <li class="current"><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Our Comprehensive Real Estate Services</h2>
+      <p>
+        At luckystar-homes, we offer a wide range of services to meet all your
+        real estate needs. Whether you're buying, selling, or renting, our
+        expert team is here to guide you every step of the way.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Home Buying</h3>
+          <p>
+            Find your dream home with our expert guidance. We'll help you
+            navigate the market, negotiate the best price, and handle all the
+            paperwork.
+          </p>
+          <a href="servicebuy.html" class="cta-button">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💰</div>
+          <h3>Home Selling</h3>
+          <p>
+            Maximize your property's value with our selling expertise. We'll
+            market your home effectively and ensure a smooth transaction
+            process.
+          </p>
+          <a href="servicesell.html" class="cta-button">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔑</div>
+          <h3>Property Management</h3>
+          <p>
+            Let us handle the day-to-day operations of your rental properties.
+            We'll find reliable tenants and maintain your investment.
+          </p>
+          <a href="servicemanagement.html" class="cta-button">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Market Analysis</h3>
+          <p>
+            Stay informed with our in-depth market analysis. We provide valuable
+            insights to help you make smart real estate decisions.
+          </p>
+          <a
+            href="https://websim.ai/c/ij2aMmIkJ8XRNoE4d/services/analysis"
+            class="cta-button"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>New Construction</h3>
+          <p>
+            Build your dream home from the ground up. We'll connect you with
+            trusted builders and oversee the construction process.
+          </p>
+          <a
+            href="https://websim.ai/c/ij2aMmIkJ8XRNoE4d/services/construction"
+            class="cta-button"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3>Commercial Real Estate</h3>
+          <p>
+            Expand your business with our commercial real estate services. We'll
+            help you find the perfect location for your venture.
+          </p>
+          <a
+            href="https://websim.ai/c/ij2aMmIkJ8XRNoE4d/services/commercial"
+            class="cta-button"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+
+    <script>
+      // // Add smooth scrolling to navigation links
+      // document.querySelectorAll("nav a").forEach((anchor) => {
+      //   anchor.addEventListener("click", function (e) {
+      //     e.preventDefault();
+      //     document.querySelector(this.getAttribute("href")).scrollIntoView({
+      //       behavior: "smooth",
+      //     });
+      //   });
+      // });
+
+      // Add animation to service cards on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>

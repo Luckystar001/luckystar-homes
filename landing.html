@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <!-- <base href="https://luckystarhomes.com/"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuckyStar Homes - Your Dream Home Awaits</title>
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="agentlogin.html">Agents Login</a>
+            <a href="userlogin.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li class="current"><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="agent dashboard.html">Sell</a>
+            <a href="user dasboard.html">Rent</a>
+          </div>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <h1>Find Your Lucky Star Home</h1>
+      <p>
+        Discover your perfect home with LuckyStar Homes. We make buying and
+        selling properties a seamless and delightful experience.
+      </p>
+      <a href="listing.html" class="cta-button">Explore Homes</a>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fas fa-search"></i>
+          <h2>Easy Search</h2>
+          <p>
+            Find your dream home with our powerful and intuitive search tools.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h2>Great Deals</h2>
+          <p>Get the best value for your money with our competitive pricing.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-home"></i>
+          <h2>Wide Selection</h2>
+          <p>
+            Choose from a vast array of properties to suit your needs and
+            preferences.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-user-tie"></i>
+          <h2>Expert Guidance</h2>
+          <p>
+            Our experienced agents are here to assist you every step of the way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="listings" class="featured-homes">
+      <h2>Featured Homes</h2>
+      <div class="home-grid">
+        <div class="home-card">
+          <img src="images/out-0 (2).webp" alt="Modern Apartment in Downtown" />
+          <div class="home-card-content">
+            <h3>Sarduana Apartment in Samaru</h3>
+            <p>2 beds • 2 baths • 1,200 sq ft</p>
+            <p class="price">#250,000</p>
+          </div>
+        </div>
+        <div class="home-card">
+          <img src="images/out-0 (3).webp" alt="Spacious Family Home" />
+          <div class="home-card-content">
+            <h3>Zeenat Apartment Samaru</h3>
+            <p>4 beds • 3 baths • 2,500 sq ft</p>
+            <p class="price">#150,000</p>
+          </div>
+        </div>
+        <div class="home-card">
+          <img src="images/out-0 (6).webp" alt="Cozy Suburban Cottage" />
+          <div class="home-card-content">
+            <h3>Cottage Samaru</h3>
+            <p>3 beds • 2 baths • 1,800 sq ft</p>
+            <p class="price">#250,000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <img src="images/1.jpg" alt="Sarah M." width="80" height="80" />
+          <p>
+            "Luckystar-Homes helped me find the perfect house for my family.
+            Their service was exceptional!"
+          </p>
+          <h3>Comr. Lucky A.</h3>
+        </div>
+        <div class="testimonial">
+          <img src="images/2.jpg" alt="John D." width="80" height="80" />
+          <p>
+            "I sold my property quickly and at a great price thanks to the
+            Luckystar-Homes team."
+          </p>
+          <h3>Mustapha K.</h3>
+        </div>
+        <div class="testimonial">
+          <img src="images/3.jpg" alt="Emily R." width="80" height="80" />
+          <p>
+            "The process was smooth and stress-free. I highly recommend
+            Luckystar-Homes!"
+          </p>
+          <h3>Sidikatu A.</h3>
+        </div>
+        <div class="testimonial">
+          <img src="images/4.jpg" alt="Emily R." width="80" height="80" />
+          <p>
+            "The process was smooth and stress-free. I highly recommend
+            Luckystar-Homes!"
+          </p>
+          <h3>Abdulkareem A.</h3>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Automatic testimonial slider
+        const testimonialSlider = document.querySelector(".testimonial-slider");
+        let currentIndex = 0;
+
+        function slideTestimonials() {
+          currentIndex = (currentIndex + 1) % testimonialSlider.children.length;
+          testimonialSlider.scrollTo({
+            left: currentIndex * testimonialSlider.offsetWidth,
+            behavior: "smooth",
+          });
+        }
+        setInterval(slideTestimonials, 5000);
+
+        // Add animation to features and home cards on scroll
+        const animatedElements = document.querySelectorAll(
+          ".feature, .home-card"
+        );
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.animation = "fadeInUp 1s ease-out forwards";
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        animatedElements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+
+      // Add this to your existing <style> tag or in a separate <style> tag
+      document.head.insertAdjacentHTML(
+        "beforeend",
+        `
+      <style>
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .feature, .home-card {
+          opacity: 0;
+        }
+      </style>
+    `
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <!-- <base href="https://websim-marketplace/about" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>luckystar-homes - About Us</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="agentlogin.html">Agents Login</a>
+            <a href="userlogin.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="https://websim-marketplace/services/sell">Sell</a>
+            <a href="https://websim-marketplace/services/rent">Rent</a>
+          </div>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li class="current"><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="about-section">
+        <h2>Our Story</h2>
+        <p>
+          Luckystar-Homes was founded in 2024 with a simple yet powerful
+          mission: to help people find their perfect home. We believe that a
+          home is more than just a place to live; it's where memories are made,
+          families grow, and dreams come true.
+        </p>
+        <p>
+          Over the years, we've grown from a small local agency to a nationwide
+          leader in real estate services. Our success is built on our commitment
+          to excellence, integrity, and personalized customer service. We
+          understand that buying or selling a home is one of the most
+          significant decisions in a person's life, and we're here to make that
+          process as smooth and enjoyable as possible.
+        </p>
+      </section>
+
+      <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <img src="images/yusuf.png" alt="Yusuf, A" width="150" height="150" />
+          <h3>Yusuf Kusimo</h3>
+          <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="images/mahrez.png"
+            alt="Mahrez Yakubu, Head of Sales"
+            width="150"
+            height="150"
+          />
+          <h3>Mahrez Yakubu</h3>
+          <p>Head of Sales</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="images/1.jpg"
+            alt="Abah Lucky, Lead Designer"
+            width="150"
+            height="150"
+          />
+          <h3>Abah Lucky</h3>
+          <p>Lead Designer</p>
+        </div>
+        <div class="team-member">
+          <img
+            src="images/jammo.png"
+            alt="Alfa Jammo, Devop Lord"
+            width="150"
+            height="150"
+          />
+          <h3>Alfa Jammo</h3>
+          <p>Devop Lord</p>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <h2>Our Values</h2>
+        <div class="values-list">
+          <div class="value-item">
+            <h3>Integrity</h3>
+            <p>We believe in honesty and transparency in all our dealings.</p>
+          </div>
+          <div class="value-item">
+            <h3>Excellence</h3>
+            <p>We strive for excellence in everything we do.</p>
+          </div>
+          <div class="value-item">
+            <h3>Innovation</h3>
+            <p>
+              We embrace new technologies and ideas to better serve our clients.
+            </p>
+          </div>
+          <div class="value-item">
+            <h3>Community</h3>
+            <p>We are committed to giving back to the communities we serve.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+    <!-- <script>
+      function redirectToLogin() {
+        window.location.href = "login page.html";
+      }
+
+      // Example condition to check if the user is not authenticated
+      const isAuthenticated = false; // This would be determined by your authentication logic
+
+      if (!isAuthenticated) {
+        redirectToLogin();
+      }
+    </script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add smooth scrolling to page
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Add hover effect to team member images
+        const teamMembers = document.querySelectorAll(".team-member img");
+        teamMembers.forEach((member) => {
+          member.addEventListener("mouseenter", () => {
+            member.style.transform = "scale(1.1)";
+            member.style.transition = "transform 0.3s ease";
+          });
+          member.addEventListener("mouseleave", () => {
+            member.style.transform = "scale(1)";
+          });
+        });
+
+        // Add animation to value items
+        const valueItems = document.querySelectorAll(".value-item");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        valueItems.forEach((item) => {
+          item.style.opacity = "0";
+          item.style.transform = "translateY(20px)";
+          item.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+          observer.observe(item);
+        });
+      });
+    </script>
+  </body>
+</html>

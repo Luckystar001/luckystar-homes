@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <!-- <base href="https://websim-marketplace/login"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luckystar Homes Login</title>
+    <link rel="stylesheet" href="login page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="agentlogin.html">Agents Login</a>
+            <a href="userlogin.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="https://websim-marketplace/services/sell">Sell</a>
+            <a href="https://websim-marketplace/services/rent">Rent</a>
+          </div>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="current"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="body">
+      <div class="login-container">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes Login</h1>
+        <div id="error-message" class="error-message"></div>
+        <form id="login-form">
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <div class="links">
+          <a href="forgotten password.html">Forgot Password?</a>
+          <a href="registration.html">Create Account</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginForm = document.getElementById("login-form");
+        const errorMessage = document.getElementById("error-message");
+
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Simulating login process
+          if (email === "user@example.com" && password === "password123") {
+            // Successful login
+            errorMessage.style.display = "none";
+            alert("Login successful! Redirecting to dashboard...");
+            window.location.href = "https://websim-marketplace/dashboard";
+          } else {
+            // Failed login
+            errorMessage.textContent =
+              "Invalid email or password. Please try again.";
+            errorMessage.style.display = "block";
+          }
+        });
+
+        // Add some simple animations
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", () => {
+            input.style.transform = "scale(1.05)";
+            input.style.transition = "transform 0.3s ease";
+          });
+          input.addEventListener("blur", () => {
+            input.style.transform = "scale(1)";
+          });
+        });
+
+        // Password visibility toggle
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.createElement("button");
+        togglePassword.textContent = "Show";
+        togglePassword.type = "button";
+        togglePassword.style.position = "absolute";
+        togglePassword.style.right = "10px";
+        togglePassword.style.top = "50%";
+        togglePassword.style.transform = "translateY(-50%)";
+        togglePassword.style.background = "none";
+        togglePassword.style.border = "none";
+        togglePassword.style.color = "#3a7bd5";
+        togglePassword.style.cursor = "pointer";
+
+        passwordInput.parentElement.style.position = "relative";
+        passwordInput.parentElement.appendChild(togglePassword);
+
+        togglePassword.addEventListener("click", () => {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+          togglePassword.textContent = type === "password" ? "Show" : "Hide";
+        });
+      });
+    </script>
+  </body>
+</html>

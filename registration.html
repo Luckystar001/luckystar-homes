@@ -1,0 +1,193 @@
+<html>
+  <head>
+    <!-- <base href="https://websim-marketplace/register" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luckystar-Homes - Register</title>
+    <link rel="stylesheet" href="registration.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="agentlogin.html">Agents Login</a>
+            <a href="userlogin.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="https://websim-marketplace/services/sell">Sell</a>
+            <a href="https://websim-marketplace/services/rent">Rent</a>
+          </div>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="current"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <div class="register-container">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Create Your Luckystar-Homes Account</h1>
+        <div id="error-message" class="error-message"></div>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" required />
+          </div>
+          <div class="form-group">
+            <label for="user-type">I am a:</label>
+            <select id="user-type" required>
+              <option value="">Select user type</option>
+              <option value="buyer">Home Buyer</option>
+              <option value="seller">Home Seller</option>
+              <option value="agent">Real Estate Agent</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" />
+          </div>
+          <button type="submit">Create Account</button>
+        </form>
+        <div class="links">
+          <p>
+            Already have an account?
+            <a href="login page.html">Login here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const registerForm = document.getElementById("register-form");
+        const errorMessage = document.getElementById("error-message");
+
+        registerForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const firstName = document.getElementById("first-name").value;
+          const lastName = document.getElementById("last-name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
+          const userType = document.getElementById("user-type").value;
+          const phone = document.getElementById("phone").value;
+
+          // Simple validation
+          if (password !== confirmPassword) {
+            showError("Passwords do not match");
+            return;
+          }
+
+          if (password.length < 8) {
+            showError("Password must be at least 8 characters long");
+            return;
+          }
+
+          // Simulating registration process
+          console.log("Registration data:", {
+            firstName,
+            lastName,
+            email,
+            userType,
+            phone,
+          });
+          alert("Registration successful! Redirecting to login page...");
+          window.location.href = "https://websim-marketplace/login";
+        });
+
+        function showError(message) {
+          errorMessage.textContent = message;
+          errorMessage.style.display = "block";
+        }
+
+        // Add some simple animations
+        const inputs = document.querySelectorAll("input, select");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", () => {
+            input.style.transform = "scale(1.02)";
+            input.style.transition = "transform 0.3s ease";
+          });
+          input.addEventListener("blur", () => {
+            input.style.transform = "scale(1)";
+          });
+        });
+
+        // Password strength indicator
+        const passwordInput = document.getElementById("password");
+        const strengthIndicator = document.createElement("div");
+        strengthIndicator.style.height = "5px";
+        strengthIndicator.style.marginTop = "5px";
+        strengthIndicator.style.transition = "all 0.3s ease";
+        passwordInput.parentElement.appendChild(strengthIndicator);
+
+        passwordInput.addEventListener("input", () => {
+          const strength = calculatePasswordStrength(passwordInput.value);
+          updateStrengthIndicator(strength);
+        });
+
+        function calculatePasswordStrength(password) {
+          let strength = 0;
+          if (password.length >= 8) strength++;
+          if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+          if (password.match(/\d/)) strength++;
+          if (password.match(/[^a-zA-Z\d]/)) strength++;
+          return strength;
+        }
+
+        function updateStrengthIndicator(strength) {
+          const colors = ["#e74c3c", "#f39c12", "#f1c40f", "#2ecc71"];
+          strengthIndicator.style.backgroundColor = colors[strength];
+          strengthIndicator.style.width = `${(strength + 1) * 25}%`;
+        }
+      });
+    </script>
+  </body>
+</html>
