@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Login - DreamHomes</title>
+    <link rel="stylesheet" href="loginagent.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="loginagent.html">Agents Login</a>
+            <a href="login page.html">User Login</a>
+          </div>
+        </div>
+        <button class="signup">Sign Up</button>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listing.html">Listings</a>
+        </li>
+        <li class="dropdown">
+          <a href="">Bookings</a>
+          <div class="dropdown-content">
+            <a href="https://websim-marketplace/services/sell">Sell</a>
+            <a href="https://websim-marketplace/services/rent">Rent</a>
+          </div>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="login-container">
+        <form class="login-form" id="agent-login-form">
+          <h2>Agent Login</h2>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit" class="login-btn">Login</button>
+          <p id="error-message" class="error-message"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+      </div>
+    </footer>
+    <script>
+      const loginForm = document.getElementById("agent-login-form");
+      const errorMessage = document.getElementById("error-message");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (!email || !password) {
+          errorMessage.textContent = "Please enter both email and password.";
+          return;
+        }
+
+        console.log("Login attempt:", { email, password });
+        errorMessage.textContent = "";
+        alert("Login successful! Redirecting to agent dashboard...");
+      });
+
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.createElement("button");
+      togglePassword.textContent = "Show";
+      togglePassword.type = "button";
+      togglePassword.style.position = "absolute";
+      togglePassword.style.right = "10px";
+      togglePassword.style.top = "75%";
+      togglePassword.style.transform = "translateY(-50%)";
+      togglePassword.style.background = "none";
+      togglePassword.style.border = "none";
+      togglePassword.style.color = "#3a7bd5";
+      togglePassword.style.cursor = "pointer";
+
+      passwordInput.parentElement.style.position = "relative";
+      passwordInput.parentElement.appendChild(togglePassword);
+
+      togglePassword.addEventListener("click", () => {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+        togglePassword.textContent = type === "password" ? "Show" : "Hide";
+      });
+    </script>
+  </body>
+</html>

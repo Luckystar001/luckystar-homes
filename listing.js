@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             listingsSection.innerHTML += listingCard;
         });
     }
+    
 
     // Initial display of listings
     displayListings(allListings);
@@ -136,3 +137,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+

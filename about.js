@@ -1,3 +1,8 @@
+
+    document.getElementById("signUpBtn").addEventListener("click", function() {
+        window.location.open("registration.html", "_blank"); // Redirect to registration page
+    });
+
 // Data for team members
 const teamMembers = [
     {
