@@ -1,0 +1,438 @@
+<html><head><base href="https://websim-marketplace/myaccount">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account - DreamHomes</title>
+<style>
+  :root {
+    --primary-color: #3a7bd5;
+    --secondary-color: #2c3e50;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+    --light-gray: #e0e0e0;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .sidebar ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  .content {
+    flex: 3;
+    min-width: 300px;
+  }
+
+  .account-section {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .account-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 0.5rem;
+  }
+
+  .property-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .property-card {
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .property-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .property-info {
+    padding: 1rem;
+  }
+
+  .property-price {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .property-status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .status-active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .status-pending {
+    background-color: #FFC107;
+    color: black;
+  }
+
+  .status-sold {
+    background-color: #F44336;
+    color: white;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  th {
+    background-color: var(--light-gray);
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: var(--secondary-color);
+  }
+
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>DreamHomes</h1>
+    <p>My Account</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="https://websim-marketplace/home">Home</a></li>
+      <li><a href="https://websim-marketplace/listings">Listings</a></li>
+      <li><a href="https://websim-marketplace/about">About Us</a></li>
+      <li><a href="https://websim-marketplace/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <aside class="sidebar">
+      <h2>Account Menu</h2>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#my-properties">My Properties</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#profile">Edit Profile</a></li>
+        <li><a href="#settings">Account Settings</a></li>
+      </ul>
+    </aside>
+
+    <div class="content">
+      <section id="dashboard" class="account-section">
+        <h2>Dashboard</h2>
+        <p>Welcome back, John Doe!</p>
+        <p>Here's a quick overview of your account:</p>
+        <ul>
+          <li>Active Listings: 3</li>
+          <li>Pending Sales: 1</li>
+          <li>Unread Messages: 2</li>
+        </ul>
+      </section>
+
+      <section id="my-properties" class="account-section">
+        <h2>My Properties</h2>
+        <div class="property-list">
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://websim-marketplace/images/house1.jpg');"></div>
+            <div class="property-info">
+              <h3>Modern Townhouse</h3>
+              <p class="property-price">$350,000</p>
+              <p>123 Main St, Cityville</p>
+              <span class="property-status status-active">Active</span>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://websim-marketplace/images/apartment1.jpg');"></div>
+            <div class="property-info">
+              <h3>Downtown Loft</h3>
+              <p class="property-price">$275,000</p>
+              <p>456 Urban Ave, Metropolis</p>
+              <span class="property-status status-pending">Pending</span>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://websim-marketplace/images/house2.jpg');"></div>
+            <div class="property-info">
+              <h3>Suburban Family Home</h3>
+              <p class="property-price">$450,000</p>
+              <p>789 Oak St, Suburbia</p>
+              <span class="property-status status-active">Active</span>
+            </div>
+          </div>
+        </div>
+        <p><a href="#" class="btn">Add New Property</a></p>
+      </section>
+
+      <section id="favorites" class="account-section">
+        <h2>Favorites</h2>
+        <div class="property-list">
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://websim-marketplace/images/condo1.jpg');"></div>
+            <div class="property-info">
+              <h3>Luxury Condo</h3>
+              <p class="property-price">$500,000</p>
+              <p>101 Skyline Blvd, Highrise City</p>
+            </div>
+          </div>
+          <div class="property-card">
+            <div class="property-image" style="background-image: url('https://websim-marketplace/images/cabin1.jpg');"></div>
+            <div class="property-info">
+              <h3>Mountain Retreat</h3>
+              <p class="property-price">$325,000</p>
+              <p>222 Pine Ridge, Mountainville</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="messages" class="account-section">
+        <h2>Messages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Subject</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sarah Smith</td>
+              <td>Interested in Downtown Loft</td>
+              <td>May 15, 2023</td>
+            </tr>
+            <tr>
+              <td>DreamHomes Team</td>
+              <td>Your listing has been approved</td>
+              <td>May 13, 2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="transactions" class="account-section">
+        <h2>Transactions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>April 30, 2023</td>
+              <td>123 Main St, Cityville</td>
+              <td>Listing Fee</td>
+              <td>$150</td>
+            </tr>
+            <tr>
+              <td>March 15, 2023</td>
+              <td>456 Urban Ave, Metropolis</td>
+              <td>Listing Fee</td>
+              <td>$150</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="profile" class="account-section">
+        <h2>Edit Profile</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="John Doe" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="john.doe@example.com" required>
+          
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" value="(123) 456-7890">
+          
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="bio" rows="4">Experienced realtor with a passion for helping clients find their dream homes.</textarea>
+          
+          <button type="submit" class="btn">Save Changes</button>
+        </form>
+      </section>
+
+      <section id="settings" class="account-section">
+        <h2>Account Settings</h2>
+        <form>
+          <label for="password">New Password:</label>
+          <input type="password" id="password" name="password">
+          
+          <label for="confirm-password">Confirm New Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+          
+          <h3>Notification Preferences</h3>
+          <label>
+            <input type="checkbox" name="email-notifications" checked> Receive email notifications
+          </label>
+          <label>
+            <input type="checkbox" name="sms-notifications"> Receive SMS notifications
+          </label>
+          
+          <button type="submit" class="btn">Save Settings</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 DreamHomes. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add active class to current section in sidebar
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.account-section');
+      const navItems = document.querySelectorAll('.sidebar ul li a');
+
+      let currentSection = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 50) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').substring(1) === currentSection) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body></html>
