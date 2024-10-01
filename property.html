@@ -1,274 +1,324 @@
-<html><head><base href="https://websim-marketplace/buyer-dashboard">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Property Details - DreamHomes</title>
-<style>
-  :root {
-    --primary-color: #3a7bd5;
-    --secondary-color: #2c3e50;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --white: #ffffff;
-    --light-gray: #e0e0e0;
-    --success-color: #2ecc71;
-    --warning-color: #f39c12;
-  }
-
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-
-  header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem;
-    text-align: center;
-  }
-
-  nav {
-    background-color: var(--secondary-color);
-    padding: 0.5rem;
-  }
-
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 0 0.5rem;
-  }
-
-  nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    color: var(--light-gray);
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  .property-details {
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-  }
-
-  .property-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-
-  .property-title {
-    font-size: 2rem;
-    color: var(--secondary-color);
-  }
-
-  .property-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-  }
-
-  .property-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-  }
-
-  .property-description {
-    margin-bottom: 2rem;
-  }
-
-  .property-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .feature {
-    background-color: var(--light-gray);
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-  }
-
-  .feature-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .cta-button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .book-viewing {
-    background-color: var(--success-color);
-    color: var(--white);
-  }
-
-  .book-viewing:hover {
-    background-color: #27ae60;
-  }
-
-  .contact-agent {
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
-
-  .contact-agent:hover {
-    background-color: #2980b9;
-  }
-
-  footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-</head>
-<body>
-  <header>
-    <h1>Property Details</h1>
-  </header>
-  
-  <nav>
-    <ul>
-      <li><a href="https://websim-marketplace/home">Home</a></li>
-      <li><a href="https://websim-marketplace/listings">Listings</a></li>
-      <li><a href="https://websim-marketplace/about">About Us</a></li>
-      <li><a href="https://websim-marketplace/booking">Booking</a></li>
-      <li><a href="https://websim-marketplace/contact">Contact</a></li>
-      <li><a href="https://websim-marketplace/buyer-dashboard">My Dashboard</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section class="property-details">
-      <div class="property-header">
-        <h2 class="property-title">Modern Family Home</h2>
-        <p class="property-price">$450,000</p>
-      </div>
-
-      <img src="https://replicate.delivery/yhqm/hk727f4mK1VHDym12L6vPNxVBfd01f7on0ojlpFiyh7i4cEnA/out-0.webp" alt="A serene, contemporary home nestled amid a lush, verdant landscape." class="property-image" width="1200" height="800">
-
-      <div class="property-description">
-        <p>Welcome to this stunning modern family home, perfectly situated in a peaceful neighborhood. This contemporary masterpiece seamlessly blends indoor and outdoor living, creating a harmonious environment for you and your loved ones.</p>
-        <p>The property boasts large windows that flood the interior with natural light, offering breathtaking views of the spacious front yard and surrounding greenery. The architectural design emphasizes clean lines and open spaces, providing a sense of freedom and tranquility throughout the home.</p>
-      </div>
-
-      <div class="property-features">
-        <div class="feature">
-          <div class="feature-icon">🛏️</div>
-          <p>4 Bedrooms</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🚿</div>
-          <p>3 Bathrooms</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🚗</div>
-          <p>2 Car Garage</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">📏</div>
-          <p>2,500 sq ft</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🌳</div>
-          <p>0.5 Acre Lot</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🏗️</div>
-          <p>Built in 2020</p>
-        </div>
-      </div>
-
-      <div class="cta-buttons">
-        <button class="cta-button book-viewing" onclick="bookViewing()">Book a Viewing</button>
-        <button class="cta-button contact-agent" onclick="contactAgent()">Contact Agent</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 DreamHomes. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function bookViewing() {
-      // In a real application, this would open a booking form or redirect to a booking page
-      alert("Booking feature coming soon! We'll contact you to arrange a viewing.");
-    }
-
-    function contactAgent() {
-      // In a real application, this would open a contact form or initiate a chat with an agent
-      alert("Connecting you with an agent. Please check your email for further instructions.");
-    }
-
-    // Add smooth scrolling for better user experience
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Lazy load images for better performance
-    document.addEventListener("DOMContentLoaded", function() {
-      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-      if ("IntersectionObserver" in window) {
-        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              let lazyImage = entry.target;
-              lazyImage.src = lazyImage.dataset.src;
-              lazyImage.classList.remove("lazy");
-              lazyImageObserver.unobserve(lazyImage);
-            }
-          });
-        });
-
-        lazyImages.forEach(function(lazyImage) {
-          lazyImageObserver.observe(lazyImage);
-        });
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Details - DreamHomes</title>
+    <style>
+      :root {
+        --primary-color: #3a7bd5;
+        --secondary-color: #2c3e50;
+        --background-color: #f4f4f4;
+        --text-color: #333;
+        --white: #ffffff;
+        --light-gray: #e0e0e0;
+        --success-color: #2ecc71;
+        --warning-color: #f39c12;
       }
-    });
-  </script>
-</body>
+
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        background-color: var(--secondary-color);
+        padding: 0.5rem;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 0.5rem;
+      }
+
+      nav ul li a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--light-gray);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .property-details {
+        background-color: var(--white);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      .property-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .property-title {
+        font-size: 2rem;
+        color: var(--secondary-color);
+      }
+
+      .property-price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .property-image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+      }
+
+      .property-description {
+        margin-bottom: 2rem;
+      }
+
+      .property-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature {
+        background-color: var(--light-gray);
+        padding: 1rem;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .cta-button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .book-viewing {
+        background-color: var(--success-color);
+        color: var(--white);
+      }
+
+      .book-viewing:hover {
+        background-color: #27ae60;
+      }
+
+      .contact-agent {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      .contact-agent:hover {
+        background-color: #2980b9;
+      }
+
+      footer {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Property Details</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="https://websim-marketplace/home">Home</a></li>
+        <li><a href="https://websim-marketplace/listings">Listings</a></li>
+        <li><a href="https://websim-marketplace/about">About Us</a></li>
+        <li><a href="https://websim-marketplace/booking">Booking</a></li>
+        <li><a href="https://websim-marketplace/contact">Contact</a></li>
+        <li>
+          <a href="https://websim-marketplace/buyer-dashboard">My Dashboard</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="property-details">
+        <div class="property-header">
+          <h2 class="property-title" id="property-title">Property Title</h2>
+          <p class="property-price" id="property-price">$0</p>
+        </div>
+
+        <image
+          id="property-image"
+          src=""
+          alt="Property Image"
+          class="property-image"
+          width="1200"
+          height="800"
+        />
+
+        <div class="property-description">
+          <p id="property-details">Property Details Placeholder</p>
+        </div>
+
+        <div class="property-features">
+          <div class="feature">
+            <div class="feature-icon">🛏️</div>
+            <p id="bedrooms">Bedrooms</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚿</div>
+            <p id="bathrooms">Bathrooms</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚗</div>
+            <p id="garage">Garage</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📏</div>
+            <p id="sqft">Size</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🌳</div>
+            <p id="lot">Lot Size</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏗️</div>
+            <p id="year">Year Built</p>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <button class="cta-button book-viewing" onclick="bookViewing()">
+            Book a Viewing
+          </button>
+          <button class="cta-button contact-agent" onclick="contactAgent()">
+            Contact Agent
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 DreamHomes. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get the query string from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const listingId = urlParams.get("id");
+
+        // Array containing property details
+        const properties = [
+          {
+            id: 1,
+            title: "Modern Family Home",
+            price: "$450,000",
+            image: "images/out-0 (1).webp",
+            description: `Welcome to this stunning modern family home, perfectly situated in a peaceful neighborhood. This contemporary masterpiece seamlessly blends indoor and outdoor living, creating a harmonious environment for you and your loved ones.`,
+            bedrooms: "4 Bedrooms",
+            bathrooms: "3 Bathrooms",
+            garage: "2 Car Garage",
+            sqft: "2,500 sq ft",
+            lot: "0.5 Acre Lot",
+            year: "Built in 2020",
+          },
+          {
+            id: 2,
+            title: "Suburban Retreat",
+            price: "$150,000",
+            image: "images/out-0 (3).webp",
+            description:
+              "This charming suburban retreat offers peaceful living...",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+            garage: "2 Car Garage",
+            sqft: "1,800 sq ft",
+            lot: "0.3 Acre Lot",
+            year: "Built in 2015",
+          },
+          // Add more properties here if needed
+        ];
+
+        // Function to find the property by ID
+        function loadPropertyDetails() {
+          const propertyId = parseInt(listingId);
+          const property = properties.find((prop) => prop.id === propertyId);
+
+          if (property) {
+            document.getElementById("property-title").textContent =
+              property.title;
+            document.getElementById("property-price").textContent =
+              property.price;
+            document.getElementById("property-image").src = property.image;
+            document.getElementById("property-details").textContent =
+              property.description;
+            document.getElementById("bedrooms").textContent = property.bedrooms;
+            document.getElementById("bathrooms").textContent =
+              property.bathrooms;
+            document.getElementById("garage").textContent = property.garage;
+            document.getElementById("sqft").textContent = property.sqft;
+            document.getElementById("lot").textContent = property.lot;
+            document.getElementById("year").textContent = property.year;
+          } else {
+            console.error("Property not found");
+          }
+        }
+
+        // Load property details when the page loads
+        window.onload = loadPropertyDetails;
+      });
+
+      function bookViewing() {
+        alert(
+          "Booking feature coming soon! We'll contact you to arrange a viewing."
+        );
+      }
+
+      function contactAgent() {
+        alert(
+          "Connecting you with an agent. Please check your email for further instructions."
+        );
+      }
+    </script>
+  </body>
 </html>
