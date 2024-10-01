@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextPageBtn = document.getElementById("next-page");
     const listingsSection = document.querySelector(".listings");
     let currentPage = 1;
-    const listingsPerPage = 9;  // Adjust the number of listings shown per page
+    const listingsPerPage = 6;  // Adjust the number of listings shown per page
     let filteredListings = [];   // This will hold the filtered listings data
 
     // Sample listings data (with unique ID for each listing)

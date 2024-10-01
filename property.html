@@ -208,22 +208,6 @@
             <div class="feature-icon">🚿</div>
             <p id="bathrooms">Bathrooms</p>
           </div>
-          <div class="feature">
-            <div class="feature-icon">🚗</div>
-            <p id="garage">Garage</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">📏</div>
-            <p id="sqft">Size</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🌳</div>
-            <p id="lot">Lot Size</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🏗️</div>
-            <p id="year">Year Built</p>
-          </div>
         </div>
 
         <div class="cta-buttons">
@@ -251,32 +235,284 @@
         const properties = [
           {
             id: 1,
-            title: "Modern Family Home",
-            price: "$450,000",
+            title: "Modern Oasis",
+            price: "$1,250,000",
             image: "images/out-0 (1).webp",
-            description: `Welcome to this stunning modern family home, perfectly situated in a peaceful neighborhood. This contemporary masterpiece seamlessly blends indoor and outdoor living, creating a harmonious environment for you and your loved ones.`,
+            description:
+              "This luxurious home features a seamless blend of indoor and outdoor living with stunning architecture.",
             bedrooms: "4 Bedrooms",
             bathrooms: "3 Bathrooms",
-            garage: "2 Car Garage",
-            sqft: "2,500 sq ft",
-            lot: "0.5 Acre Lot",
-            year: "Built in 2020",
           },
           {
             id: 2,
+            title: "City View Apartment",
+            price: "$850,000",
+            image: "images/out-0 (2).webp",
+            description:
+              "An urban retreat with panoramic city views and modern amenities in the heart of New York City.",
+            bedrooms: "2 Bedrooms",
+            bathrooms: "2 Bathrooms",
+          },
+          {
+            id: 3,
             title: "Suburban Retreat",
-            price: "$150,000",
+            price: "$450,000",
             image: "images/out-0 (3).webp",
             description:
-              "This charming suburban retreat offers peaceful living...",
+              "Enjoy peaceful living in this spacious home located in a quiet suburban neighborhood.",
             bedrooms: "3 Bedrooms",
             bathrooms: "2.5 Bathrooms",
-            garage: "2 Car Garage",
-            sqft: "1,800 sq ft",
-            lot: "0.3 Acre Lot",
-            year: "Built in 2015",
           },
-          // Add more properties here if needed
+          {
+            id: 4,
+            title: "Downtown Condo",
+            price: "$650,000",
+            image: "images/out-0 (4).webp",
+            description:
+              "A chic and modern condo with top-tier finishes and a perfect downtown location.",
+            bedrooms: "1 Bedroom",
+            bathrooms: "1 Bathroom",
+          },
+          {
+            id: 5,
+            title: "Elegant Estate",
+            price: "$12,500,000",
+            image: "images/out-0 (5).webp",
+            description:
+              "This grand estate offers unparalleled luxury and privacy, with expansive living spaces and lush gardens.",
+            bedrooms: "6 Bedrooms",
+            bathrooms: "7 Bathrooms",
+          },
+          {
+            id: 6,
+            title: "Historic Townhouse",
+            price: "$1,800,000",
+            image: "images/out-0 (6).webp",
+            description:
+              "A beautifully restored historic townhouse, offering classic charm with modern updates.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 7,
+            title: "Historic Townhouse",
+            price: "$1,800,000",
+            image: "images/out-0 (7).webp",
+            description:
+              "This townhouse combines historic elegance with modern conveniences in a prime location.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 8,
+            title: "Historic Townhouse",
+            price: "$1,800,000",
+            image: "images/out-0 (8).webp",
+            description:
+              "Step back in time with this meticulously preserved home featuring original details and craftsmanship.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 9,
+            title: "Historic Townhouse",
+            price: "$1,800,000",
+            image: "images/out-0 (9).webp",
+            description:
+              "A perfect blend of historic charm and modern luxury in this sophisticated townhouse.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 10,
+            title: "Modern Loft",
+            price: "$1,600,000",
+            image: "images/out-0 (10).webp",
+            description:
+              "A spacious and stylish loft offering open-concept living in the heart of the city.",
+            bedrooms: "2 Bedrooms",
+            bathrooms: "2 Bathrooms",
+          },
+          {
+            id: 11,
+            title: "Cozy Cottage",
+            price: "$850,000",
+            image: "images/out-0 (11).webp",
+            description:
+              "This charming cottage is perfect for those seeking a cozy and comfortable home with rustic appeal.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2 Bathrooms",
+          },
+          {
+            id: 12,
+            title: "Victorian Mansion",
+            price: "$3,200,000",
+            image: "images/out-0 (12).webp",
+            description:
+              "A timeless Victorian mansion with exquisite details and a large, beautifully landscaped yard.",
+            bedrooms: "5 Bedrooms",
+            bathrooms: "4 Bathrooms",
+          },
+          {
+            id: 13,
+            title: "Beachfront Villa",
+            price: "$6,500,000",
+            image: "images/out-0 (13).webp",
+            description:
+              "This stunning beachfront villa offers unobstructed ocean views and direct beach access.",
+            bedrooms: "6 Bedrooms",
+            bathrooms: "5 Bathrooms",
+          },
+          {
+            id: 14,
+            title: "Chic Townhouse",
+            price: "$1,200,000",
+            image: "images/out-0 (14).webp",
+            description:
+              "A modern and chic townhouse, perfect for city living with luxurious interiors.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 15,
+            title: "Rustic Farmhouse",
+            price: "$950,000",
+            image: "images/out-0 (15).webp",
+            description:
+              "This rustic farmhouse offers a peaceful countryside retreat with plenty of space.",
+            bedrooms: "4 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 16,
+            title: "Penthouse Suite",
+            price: "$4,800,000",
+            image: "images/out-0 (16).webp",
+            description:
+              "A luxury penthouse suite with breathtaking views and state-of-the-art amenities.",
+            bedrooms: "5 Bedrooms",
+            bathrooms: "4 Bathrooms",
+          },
+          {
+            id: 17,
+            title: "Mountain Cabin",
+            price: "$1,400,000",
+            image: "images/out-0 (17).webp",
+            description:
+              "A cozy mountain cabin perfect for weekend getaways, offering privacy and natural beauty.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 18,
+            title: "Urban Apartment",
+            price: "$800,000",
+            image: "images/out-0 (18).webp",
+            description:
+              "This stylish urban apartment features modern finishes and a prime city location.",
+            bedrooms: "2 Bedrooms",
+            bathrooms: "1.5 Bathrooms",
+          },
+          {
+            id: 19,
+            title: "Colonial Estate",
+            price: "$3,750,000",
+            image: "images/out-0 (19).webp",
+            description:
+              "A grand colonial estate with beautifully maintained gardens and spacious interiors.",
+            bedrooms: "6 Bedrooms",
+            bathrooms: "5.5 Bathrooms",
+          },
+          {
+            id: 20,
+            title: "Suburban Home",
+            price: "$700,000",
+            image: "images/out-0 (20).webp",
+            description:
+              "A comfortable and spacious suburban home, perfect for families.",
+            bedrooms: "4 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 21,
+            title: "Lake House",
+            price: "$2,100,000",
+            image: "images/out-0 (21).webp",
+            description:
+              "This lakefront property offers serene views, private dock access, and luxurious living spaces.",
+            bedrooms: "4 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 22,
+            title: "Historic Brownstone",
+            price: "$2,800,000",
+            image: "images/out-0 (22).webp",
+            description:
+              "A classic brownstone with historic charm, beautifully restored with modern updates.",
+            bedrooms: "4 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 23,
+            title: "Contemporary Ranch",
+            price: "$2,200,000",
+            image: "images/out-0 (23).webp",
+            description:
+              "This sleek and stylish ranch home offers expansive open spaces and a seamless indoor-outdoor flow.",
+            bedrooms: "5 Bedrooms",
+            bathrooms: "4 Bathrooms",
+          },
+          {
+            id: 24,
+            title: "Countryside Villa",
+            price: "$3,600,000",
+            image: "images/out-0 (24).webp",
+            description:
+              "Escape to this countryside villa with breathtaking views and luxurious living spaces.",
+            bedrooms: "5 Bedrooms",
+            bathrooms: "4 Bathrooms",
+          },
+          {
+            id: 25,
+            title: "Gothic Revival",
+            price: "$4,200,000",
+            image: "images/out-0 (25).webp",
+            description:
+              "A stunning Gothic Revival home, featuring intricate details and expansive living areas.",
+            bedrooms: "6 Bedrooms",
+            bathrooms: "5 Bathrooms",
+          },
+          {
+            id: 26,
+            title: "Eco-Friendly Home",
+            price: "$1,500,000",
+            image: "images/out-0 (26).webp",
+            description:
+              "This eco-friendly home boasts sustainable design, energy efficiency, and modern finishes.",
+            bedrooms: "4 Bedrooms",
+            bathrooms: "3 Bathrooms",
+          },
+          {
+            id: 27,
+            title: "Art Deco Penthouse",
+            price: "$3,100,000",
+            image: "images/out-0 (27).webp",
+            description:
+              "A glamorous Art Deco penthouse offering luxurious living spaces and spectacular city views.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2.5 Bathrooms",
+          },
+          {
+            id: 28,
+            title: "Modern Bungalow",
+            price: "$1,300,000",
+            image: "images/out-28.webp",
+            description:
+              "A stylish and modern bungalow perfect for comfortable living in a serene location.",
+            bedrooms: "3 Bedrooms",
+            bathrooms: "2 Bathrooms",
+          },
         ];
 
         // Function to find the property by ID
@@ -295,10 +531,6 @@
             document.getElementById("bedrooms").textContent = property.bedrooms;
             document.getElementById("bathrooms").textContent =
               property.bathrooms;
-            document.getElementById("garage").textContent = property.garage;
-            document.getElementById("sqft").textContent = property.sqft;
-            document.getElementById("lot").textContent = property.lot;
-            document.getElementById("year").textContent = property.year;
           } else {
             console.error("Property not found");
           }
