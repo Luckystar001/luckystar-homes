@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Property Viewing - Lucystar Homes</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Book a Property Viewing</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listing.html">Listings</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="current"><a href="booking.html">Bookings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="user dasboard.html">My Dashboard</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="booking-form">
+        <form id="viewing-form">
+          <div class="form-group">
+            <label for="property">Select Property:</label>
+            <select id="property" name="property" required>
+              <option value="">Choose a property</option>
+              <option value="1">123 Maple Street, Springfield, IL</option>
+              <option value="2">456 Oak Avenue, Apt 7B, Springfield, IL</option>
+              <option value="3">789 Pine Road, Unit 12, Springfield, IL</option>
+              <option value="4">321 Cedar Lane, Springfield, IL</option>
+              <option value="5">
+                654 Birch Street, Apt 3C, Springfield, IL
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Comments:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <button type="submit">Book Viewing</button>
+        </form>
+
+        <div id="confirmation">
+          Your viewing request has been submitted successfully! We'll contact
+          you shortly to confirm the details.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
+    </footer>
+
+    <script src="booking.js"></script>
+  </body>
+</html>

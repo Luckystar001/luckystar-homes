@@ -6,26 +6,22 @@
 // Data for team members
 const teamMembers = [
     {
+        name: 'Abah Oche Lucky',
+        
+        imageUrl: 'images/IMG_6690.jpeg',
+        imageAlt: 'Abah Lucky, Lead Designer',
+    },
+      {
         name: 'Yusuf Kusimo',
-        title: 'CEO & Founder',
+       
         imageUrl: 'images/yusuf.png',
         imageAlt: 'Yusuf, A',
     },
-    {
-        name: 'Mahrez Yakubu',
-        title: 'Head of Sales',
-        imageUrl: 'images/mahrez.png',
-        imageAlt: 'Mahrez Yakubu, Head of Sales',
-    },
-    {
-        name: 'Abah Oche Lucky',
-        title: 'Lead Designer',
-        imageUrl: 'images/1.jpg',
-        imageAlt: 'Abah Lucky, Lead Designer',
-    },
+ 
+  
     {
         name: 'Alfa Jammo',
-        title: 'Devop Lord',
+       
         imageUrl: 'images/jammo.png',
         imageAlt: 'Alfa Jammo, Devop Lord',
     }

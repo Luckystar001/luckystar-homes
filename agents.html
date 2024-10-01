@@ -31,20 +31,13 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="listing.html">Listings</a>
-        </li>
-        <li class="dropdown">
-          <a href="">Bookings</a>
-          <div class="dropdown-content">
-            <a href="https://websim-marketplace/services/sell">Sell</a>
-            <a href="user dasboard.html">Rent</a>
-          </div>
-        </li>
+        <li><a href="listing.html">Listings</a></li>
+        <li><a href="booking.html">Bookings</a></li>
         <li><a href="service.html">Services</a></li>
         <li class="current"><a href="agents.html">Agents</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="user dasboard.html">Dashboard</a></li>
       </ul>
     </nav>
 
@@ -61,82 +54,6 @@
       </div>
     </footer>
     <img src="images/food/" alt="" />
-    <script>
-      // Sample data for agents
-      const agents = [
-        {
-          id: 1,
-          name: "Sarah Johnson",
-          title: "Senior Real Estate Agent",
-          email: "sarah.johnson@Luckystar-homes.com",
-          phone: "(555) 123-4567",
-          image: "images/food/FB_IMG_17166276304652668.jpg",
-        },
-        {
-          id: 2,
-          name: "Michael Chen",
-          title: "Luxury Property Specialist",
-          email: "michael.chen@luckystar-homes.com",
-          phone: "(555) 234-5678",
-          image: "images/food/FB_IMG_17166276383807970.jpg",
-        },
-        {
-          id: 3,
-          name: "Emily Rodriguez",
-          title: "First-Time Homebuyer Expert",
-          email: "emily.rodriguez@luckystar-homes.com",
-          phone: "(555) 345-6789",
-          image: "images/food/FB_IMG_17166276414382397.jpg",
-        },
-        {
-          id: 4,
-          name: "David Thompson",
-          title: "Commercial Real Estate Agent",
-          email: "david.thompson@luckystar-homes.com",
-          phone: "(555) 456-7890",
-          image: "images/food/FB_IMG_17169887611004759.jpg",
-        },
-        {
-          id: 5,
-          name: "Lisa Patel",
-          title: "Investment Property Advisor",
-          email: "lisa.patel@luckystar-homes.com",
-          phone: "(555) 567-8901",
-          image: "images/food/FB_IMG_17169887328924937.jpg",
-        },
-        {
-          id: 6,
-          name: "Robert Green",
-          title: "Relocation Specialist",
-          email: "robert.green@luckystar-homes.com",
-          phone: "(555) 678-9012",
-          image: "images/food/FB_IMG_17169173422117789.jpg",
-        },
-      ];
-
-      function createAgentCard(agent) {
-        return `
-        <div class="agent-card">
-          <img src="${agent.image}" alt="${agent.name}" class="agent-image">
-          <div class="agent-details">
-            <h2 class="agent-name">${agent.name}</h2>
-            <p class="agent-title">${agent.title}</p>
-            <div class="agent-contact">
-              <a href="mailto:${agent.email}">${agent.email}</a>
-              <a href="tel:${agent.phone}">${agent.phone}</a>
-            </div>
-          </div>
-        </div>
-      `;
-      }
-
-      function renderAgents() {
-        const container = document.querySelector(".agents-container");
-        container.innerHTML = agents.map(createAgentCard).join("");
-      }
-
-      // Render agents when the page loads
-      document.addEventListener("DOMContentLoaded", renderAgents);
-    </script>
+    <script src="agents.js"></script>
   </body>
 </html>

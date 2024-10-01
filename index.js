@@ -80,6 +80,104 @@ document.addEventListener("DOMContentLoaded", () => {
           details: '3 bed | 2.5 bath | 2,200 sqft',
           price: '$1,800,000'
       },
+      {
+        img: 'images/out-0 (7).webp',
+        title: 'Historic Townhouse',
+        address: '222 Beacon St, Boston, MA',
+        details: '3 bed | 2.5 bath | 2,200 sqft',
+        price: '$1,800,000'
+    },
+    {
+        img: 'images/out-0 (8).webp',
+        title: 'Historic Townhouse',
+        address: '222 Beacon St, Boston, MA',
+        details: '3 bed | 2.5 bath | 2,200 sqft',
+        price: '$1,800,000'
+    },
+    {
+        img: 'images/out-0 (9).webp',
+        title: 'Historic Townhouse',
+        address: '222 Beacon St, Boston, MA',
+        details: '3 bed | 2.5 bath | 2,200 sqft',
+        price: '$1,800,000'
+    },
+    {
+        img: 'images/out-0 (10).webp',
+        title: 'Modern Loft',
+        address: '789 Market St, San Francisco, CA',
+        details: '2 bed | 2 bath | 1,800 sqft',
+        price: '$1,600,000'
+    },
+    {
+        img: 'images/out-0 (11).webp',
+        title: 'Cozy Cottage',
+        address: '456 Oak Dr, Portland, OR',
+        details: '3 bed | 2 bath | 1,200 sqft',
+        price: '$850,000'
+    },
+    {
+        img: 'images/out-0 (12).webp',
+        title: 'Victorian Mansion',
+        address: '101 Hill St, Savannah, GA',
+        details: '5 bed | 4 bath | 3,800 sqft',
+        price: '$3,200,000'
+    },
+    {
+        img: 'images/out-0 (13).webp',
+        title: 'Beachfront Villa',
+        address: '567 Ocean Ave, Malibu, CA',
+        details: '6 bed | 5 bath | 4,500 sqft',
+        price: '$6,500,000'
+    },
+    {
+        img: 'images/out-0 (14).webp',
+        title: 'Chic Townhouse',
+        address: '901 Maple St, Chicago, IL',
+        details: '3 bed | 3 bath | 2,100 sqft',
+        price: '$1,200,000'
+    },
+    {
+        img: 'images/out-0 (15).webp',
+        title: 'Rustic Farmhouse',
+        address: '300 Country Rd, Austin, TX',
+        details: '4 bed | 2.5 bath | 3,000 sqft',
+        price: '$950,000'
+    },
+    {
+        img: 'images/out-0 (16).webp',
+        title: 'Penthouse Suite',
+        address: '88 Sunset Blvd, Los Angeles, CA',
+        details: '5 bed | 4 bath | 4,000 sqft',
+        price: '$4,800,000'
+    },
+    {
+        img: 'images/out-0 (17).webp',
+        title: 'Mountain Cabin',
+        address: '234 Pine Ln, Aspen, CO',
+        details: '3 bed | 3 bath | 2,200 sqft',
+        price: '$1,400,000'
+    },
+    {
+        img: 'images/out-0 (18).webp',
+        title: 'Urban Apartment',
+        address: '47 Broadway St, Seattle, WA',
+        details: '2 bed | 1.5 bath | 1,500 sqft',
+        price: '$800,000'
+    },
+    {
+        img: 'images/out-0 (19).webp',
+        title: 'Colonial Estate',
+        address: '650 Elm St, Charleston, SC',
+        details: '6 bed | 5.5 bath | 5,000 sqft',
+        price: '$3,750,000'
+    },
+    {
+        img: 'images/out-0 (20).webp',
+        title: 'Suburban Home',
+        address: '12 Maplewood Dr, Atlanta, GA',
+        details: '4 bed | 3 bath | 2,400 sqft',
+        price: '$700,000'
+    }
   ];
 
   // Function to display featured homes
@@ -97,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <h3>${home.title}</h3>
                       <p>${home.details}</p>
                       <p class="price">${home.price}</p>
+                     <a href="listing.html" target="_blank">   <button class="view-more-btn">View More</button></a>
                   </div>
               </div>
           `;

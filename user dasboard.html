@@ -5,12 +5,12 @@
     <title>luckystar-homes - Buyer Dashboard</title>
     <link rel="stylesheet" href="user dasboard.css" />
   </head>
-  <body>
+  <body onload="showMap()">
     <header>
       <nav>
         <div class="logo">luckystar-homes</div>
         <ul>
-          <li><a href="https://websim-marketplace/home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="https://websim-marketplace/search">Search</a></li>
           <li>
             <a href="https://websim-marketplace/buyer-dashboard">Dashboard</a>
@@ -56,9 +56,16 @@
           </section>
           <section class="map-view">
             <h2>Properties Near You</h2>
-            <div id="map-container">
-              Interactive map would be displayed here
-            </div>
+            <iframe
+              width="600"
+              height="450"
+              style="border: 0"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/search?q=properties+near+me&key=AIzaSyDyxEe8T1CKsvA_-cW4yW3d2_iMEJioJ_c"
+            >
+            </iframe>
           </section>
           <section class="saved-searches">
             <h2>Your Saved Searches</h2>

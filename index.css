@@ -49,6 +49,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -399,7 +400,7 @@ footer {
     padding: 20px;
     margin-top: 20px;
     color: #ffffff;
-    background-color: #1A1A1A;
+    background-color: var(--secondary-color);
     text-align: center;
 }
 
@@ -412,3 +413,14 @@ footer {
 }
 
 
+.view-more-btn {
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+  }
