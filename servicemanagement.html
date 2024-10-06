@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>luckystar-homes - Property Management Services</title>
     <link rel="stylesheet" href="servicemanagement.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
@@ -26,9 +27,12 @@
           <button class="sign-up-btn">Sign Up</button>
         </a>
       </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="listing.html">Listings</a></li>
@@ -37,10 +41,9 @@
         <li><a href="agents.html">Agents</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="user dasboard.html">Dashboard</a></li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
-
     <main>
       <div class="hero">
         <div class="hero-content">
@@ -134,16 +137,6 @@
     </footer>
 
     <script>
-      // Add smooth scrolling to navigation links
-      document.querySelectorAll("nav a").forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-
       // Add animation to service cards on scroll
       const observer = new IntersectionObserver(
         (entries) => {
@@ -170,6 +163,10 @@
         const scrollPosition = window.pageYOffset;
         heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
       });
+      function toggleNav() {
+        const nav = document.getElementById("navbar");
+        nav.classList.toggle("active");
+      }
     </script>
   </body>
 </html>

@@ -1,10 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <!-- <base href="https://luckystarhomes.com/"> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LuckyStar Homes - Your Dream Home Awaits</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
@@ -27,9 +28,12 @@
           <button class="sign-up-btn">Sign Up</button>
         </a>
       </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
         <li class="current"><a href="index.html">Home</a></li>
         <li><a href="listing.html">Listings</a></li>
@@ -38,7 +42,7 @@
         <li><a href="agents.html">Agents</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="user dasboard.html">Dashboard</a></li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
 
@@ -137,6 +141,7 @@
       </div>
     </footer>
 
-    <script type="module" src="index.js"></script>
+    <!-- JavaScript to toggle the navbar visibility -->
+    <script src="index.js"></script>
   </body>
 </html>

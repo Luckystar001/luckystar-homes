@@ -1,10 +1,10 @@
 <html>
   <head>
-    <!-- <base href="https://websim-marketplace/listings"> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>luckystar-homes - Property Listings</title>
     <link rel="stylesheet" href="listing.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
@@ -27,18 +27,21 @@
           <button class="sign-up-btn">Sign Up</button>
         </a>
       </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="current"><a href="listing.html">Listings</a></li>
+        <li class="current"><a href="index.html">Home</a></li>
+        <li><a href="listing.html">Listings</a></li>
         <li><a href="booking.html">Bookings</a></li>
         <li><a href="service.html">Services</a></li>
         <li><a href="agents.html">Agents</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="user dasboard.html">Dashboard</a></li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
 
@@ -90,6 +93,6 @@
         <p>Luckystar-Homes Portal, Copyright &copy; 2024</p>
       </div>
     </footer>
-    <script type="module" src="listing.js"></script>
+    <script src="listing.js"></script>
   </body>
 </html>

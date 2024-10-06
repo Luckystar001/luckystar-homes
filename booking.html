@@ -4,26 +4,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book a Property Viewing - Lucystar Homes</title>
     <link rel="stylesheet" href="booking.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
-      <h1>Book a Property Viewing</h1>
+      <div class="logo">
+        <img
+          src="images/Screenshot 2024-08-02 181846.png"
+          alt="Luckystar-Homes Logo"
+        />
+        <h1>Luckystar-Homes</h1>
+      </div>
+      <div class="user-actions">
+        <div class="login-dropdown">
+          <button class="login">Log In</button>
+          <div class="login-dropdown-content">
+            <a href="loginagent.html">Agents Login</a>
+            <a href="login page.html">User Login</a>
+          </div>
+        </div>
+        <a href="registration.html" target="_blank">
+          <button class="sign-up-btn">Sign Up</button>
+        </a>
+      </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="listing.html">Listings</a></li>
-        <li><a href="about.html">About Us</a></li>
         <li class="current"><a href="booking.html">Bookings</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-          <a href="user dasboard.html">My Dashboard</a>
-        </li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
 
     <main>
+      <div><h2>Book a Property Viewing</h2></div>
       <section class="booking-form">
         <form id="viewing-form">
           <div class="form-group">

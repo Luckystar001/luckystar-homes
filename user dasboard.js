@@ -13,7 +13,10 @@ function editProfile() {
   function scheduleViewing(propertyId) {
     alert(`Scheduling a viewing for property #${propertyId}`);
   }
-
+  function toggleNav() {
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("active");
+  }
   // document.addEventListener("DOMContentLoaded", () => {
   //   // Add hover effects to property items
   //   const propertyItems = document.querySelectorAll(".property-item");

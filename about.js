@@ -110,3 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(item);
   });
 });
+
+function toggleNav() {
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("active");
+}

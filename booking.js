@@ -61,3 +61,8 @@ input.addEventListener("input", () => {
   input.classList.remove("error");
 });
 });
+
+function toggleNav() {
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("active");
+}

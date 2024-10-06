@@ -1,10 +1,10 @@
 <html>
   <head>
-    <!-- <base href="https://websim-marketplace/contact" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luckystar-Homes - Contact Us</title>
     <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
@@ -27,9 +27,12 @@
           <button class="sign-up-btn">Sign Up</button>
         </a>
       </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="listing.html">Listings</a></li>
@@ -38,7 +41,7 @@
         <li><a href="agents.html">Agents</a></li>
         <li><a href="about.html">About</a></li>
         <li class="current"><a href="contact.html">Contact</a></li>
-        <li><a href="user dasboard.html">Dashboard</a></li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
     <main>
@@ -157,6 +160,11 @@
           "opacity 0.5s ease, transform 0.5s ease";
         observer.observe(mapContainer);
       });
+
+      function toggleNav() {
+        const nav = document.getElementById("navbar");
+        nav.classList.toggle("active");
+      }
     </script>
   </body>
 </html>

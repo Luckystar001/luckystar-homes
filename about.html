@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>luckystar-homes - About Us</title>
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
   </head>
   <body>
     <header>
@@ -18,17 +19,20 @@
         <div class="login-dropdown">
           <button class="login">Log In</button>
           <div class="login-dropdown-content">
-            <a href="loginagent.html" target="_blank">Agents Login</a>
-            <a href="login page.html" target="_blank">User Login</a>
+            <a href="loginagent.html">Agents Login</a>
+            <a href="login page.html">User Login</a>
           </div>
         </div>
         <a href="registration.html" target="_blank">
           <button class="sign-up-btn">Sign Up</button>
         </a>
       </div>
+      <!-- Add the toggle button for mobile mode -->
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
     </header>
 
-    <nav>
+    <!-- The navigation menu -->
+    <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="listing.html">Listings</a></li>
@@ -37,7 +41,7 @@
         <li><a href="agents.html">Agents</a></li>
         <li class="current"><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="user dasboard.html">Dashboard</a></li>
+        <li><a href="user dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
     <main>
